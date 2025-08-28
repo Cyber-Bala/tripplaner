@@ -42,7 +42,7 @@ Tripplaner/
 ---
 
 ## 📸 Screenshot
-![Tripplaner Screenshot](./Website/static/img/screenshot.png)
+![Tripplaner Screenshot](Tripplaner/Website/static/img/Screenshot.png)
 
 ---
 
