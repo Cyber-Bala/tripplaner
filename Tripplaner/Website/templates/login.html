@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+    <!--end of font-->
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Travel Wise</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span class="logo">Travel Wise</span>
+        <div class="nav_btn">
+            <a href="index"><button class="top-btn">Home</button></a>
+            <a href="signup"><button class="top-btn">Sign Up</button></a>
+        </div>
+    </div>
+    <div class="box_login">
+        <div class="login_text">
+            <span class="head">Welcome Back to Travel Wise!</span>
+                <span class="content">Returning travelers, we're thrilled to have you back! Please
+                     sign in to your travel account for a seamless experience. Access your history, 
+                     manage preferences, and enjoy personalized travel recommendations.</span>
+        </div>
+        <form action="/login" method="post" autocomplete="off">
+            {% csrf_token %}
+            <div class="login">
+                <h1>Log in</h1>
+                <div class="input">
+                    <label for="username">Username</label> <br>
+                    <input type="text" id="username" name="username"> <br>
+                    <label for="password">Password</label> <br>
+                    <input type="password" id="password" name="password"> <br>
+                </div>
+                <span class="forgot">forgot password?</span>
+                <button type="submit">Submit</button> <br>
+
+            </div>
+        </form>
+        {% if messages %}
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                            <script>
+                                $(document).ready(function() {
+                                    alert("{{message}}")
+                                });
+                            </script>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        
+        {% endif %}
+    </div>
+</body>
+</html>

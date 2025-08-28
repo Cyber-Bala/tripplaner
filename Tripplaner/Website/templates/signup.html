@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+    <!--end of font-->
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Travel Wise</title>
+</head>
+<body>
+    <div class="navbar">
+        <span class="logo">Travel Wise</span>
+        <div class="nav_btn">
+            <a href="index"><button class="top-btn">Home</button></a>
+            <a href="login"><button class="top-btn">Login</button></a>
+        </div>
+    </div>
+    <div class="signup_box">
+        <form action="/signup" method="post">
+            {% csrf_token %}
+            <div class="signup">
+                <h1>Sign up</h1>
+                    <div class="sign_input">
+                        <div class="left">
+                            <label for="First name">First name</label> <br>
+                            <input type="text" id="fname" name="fname"> <br>
+                            <label for="username">Username</label> <br>
+                            <input type="text" id="username" name="username"> <br>
+                            <label for="password">Password</label> <br>
+                            <input type="password" id="password" name="password"> <br>
+                        </div>    
+                        <div class="left">
+                            <label for="Last name">Last name</label> <br>
+                            <input type="text" id="lname" name="lname"> <br>
+                            <label for="email">Email ID</label> <br>
+                            <input type="text" id="email" name="email"> <br>
+                            <label for="Confirm Password">Confirm Password</label> <br>
+                            <input type="password" id="password_con" name="con_password"> <br>
+                        </div>
+                    </div>
+                <button type="submit" class="signup_button">Sign up</button>
+        </form>
+        </div>
+            <div class="signup_text">
+                <span class="head">Join the Adventure!</span>
+                <span class="content">Our travel website is your gateway to exciting journeys,
+                     dream destinations, and memorable experiences. Sign up to unlock a world of 
+                     travel possibilities, personalized recommendations, and exclusive offers. 
+                     Creating an account is fast and free!</span>
+            </div>
+    </div>
+</body>
+</html>

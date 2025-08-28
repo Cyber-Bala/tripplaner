@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!--end of font-->
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Travel Wise</title>
+    <style>
+        #background{
+            background-image: url("{%static 'img/background.jpg'%}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body id="background">
+    <div class="navbar">
+        <span class="logo">Travel Wise</span>
+        <div class="nav_btn">
+            {% if data_user.timeout == 1 %}
+                <a href="signout"><button class="top-btn">Sign Out</button></a>
+            {% else %}
+                <a href="login"><button class="top-btn">Login</button></a>
+                <a href="signup"><button class="top-btn">Sign Up</button></a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="topic">
+        {% if data_user.timeout == 1 %}
+            <span class="heading1">Welcome back <br> {{data_user.username}}</span><br>
+            <span class="thought">JOBS FILL YOUR POCKETS, BUT ADVENTURES FILL YOUR SOUL.</span><br>
+        {% else %}
+            <span class="heading">Explore The World</span><br>
+            <span class="thought">JOBS FILL YOUR POCKETS, BUT ADVENTURES FILL YOUR SOUL.</span><br>
+        {% endif %}
+        <button><a href="choose">choose</a></button>
+    </div>
+    {% if messages %}
+        {% if messages %}
+            
+                {% for message in messages %}
+                        <script>
+                            $(document).ready(function() {
+                                alert("{{message}}")
+                            });
+                        </script>
+                {% endfor %}
+            
+        {% endif %}
+        
+    {% endif %}
+
+</body>
+</html>
