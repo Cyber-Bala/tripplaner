@@ -4,7 +4,7 @@
 
 **Tripplaner** is a travel website built with **Django, HTML, and CSS** that helps users explore the world and plan adventures.  
 
----
+💡 This project demonstrates my backend/full-stack skills with **Django**, while my [Portfolio Website](https://balamurugan28-portfolio.netlify.app/) highlights my frontend skills with **React, HTML, and CSS**.  
 
 ## 🚀 Features
 - 🗺️ Explore destinations with beautiful UI  
@@ -61,5 +61,8 @@ Tripplaner/
 
 ## 📌 Author
 👤 **S. Balamurugan**  
+🌐 [!Portfolio Website](https://balamurugan28-portfolio.netlify.app/)  (Built with React, HTML, CSS)
+💼 LinkedIn
+🐙 GitHub
 
 
