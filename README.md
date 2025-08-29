@@ -61,8 +61,7 @@ Tripplaner/
 
 ## 📌 Author
 👤 **S. Balamurugan**  
-🌐 [!Portfolio Website](https://balamurugan28-portfolio.netlify.app/)  (Built with React, HTML, CSS)
-💼 LinkedIn
-🐙 GitHub
+🌐 [Portfolio Website](https://balamurugan28-portfolio.netlify.app/)  (Built with React, HTML, CSS)
+
 
 
