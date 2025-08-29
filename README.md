@@ -22,7 +22,7 @@
 ---
 
 ## 📂 Project Structure
-('''
+(```
 Tripplaner/
 ├── Tripplaner/ # Django project folder (settings, urls, wsgi)
 ├── Website/ # Main app
@@ -39,7 +39,7 @@ Tripplaner/
 ├── db.sqlite3 # Database
 ├── manage.py
 └── requirements.txt
-''')
+```)
 
 ---
 
